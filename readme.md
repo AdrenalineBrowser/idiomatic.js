@@ -234,7 +234,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     // Don't quote property names unless required to. Less syntax is better.
     var object = {
         foo: "bar",
-	baz: "qux"
+        baz: "qux"
     };
 
 
