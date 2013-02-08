@@ -231,6 +231,12 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     var array = [],
       object = {};
 
+    // Don't quote property names unless required to. Less syntax is better.
+    var object = {
+        foo: "bar",
+	baz: "qux"
+    };
+
 
     // 2.B.1.2
     // Using only one `var` per scope (function) promotes readability
