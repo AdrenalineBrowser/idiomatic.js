@@ -1,0 +1,26 @@
+{
+	"bitwise": true,
+	"camelcase": true,
+	"curly": true,
+	"eqeqeq": true,
+	"newcap": true,
+	"nonew": true,
+	"quotmark": true,
+	"undef": true,
+	"trailing": true,
+
+
+	"eqnull": true,
+	"funcscope": true,
+	"browser": true,
+	"jquery": true,
+	"devel": true,
+
+	"predef" : [
+	"dopamine",
+	"channel",
+	"goog",
+	"socket"
+	]	
+}
+
