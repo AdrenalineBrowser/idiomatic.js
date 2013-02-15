@@ -824,6 +824,45 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     ```javascript
 
+    // 5.1.2
+    // A Practical Dopamine Module
+    // We use loose aggregation, so if you
+    // want to extend this module it doesn't
+    // matter which order they're loaded in.
+
+    this.dopamine = dopamine || {};
+
+    dopamine.moduleName = (function(my, $) { 
+        var localVariable;
+	
+	function localFunction() {
+	    return "something";
+        }
+
+	function otherLocal() {
+	    return "foo";
+	}
+	
+	// Part of the API. Document it!
+	my.publicFunction = function() {
+	    return "bar";   
+	};
+
+	// Expose an internal function as part of the API
+	my.otherPublic = otherLocal;
+
+	// This is how we expose internal state for testing
+	// do *NOT* include it in the API
+	my._localFunction = localFunction;
+	
+	return my;
+    })(dopamine.moduleName || {}, jQuery);
+
+    ```
+
+
+    ```javascript
+
     // 5.2.1
     // A Practical Constructor
 
